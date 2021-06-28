@@ -12,9 +12,6 @@ class App(models.Model):
     email=models.CharField(unique=True,null=False,max_length=100)
     phonenum=models.IntegerField()
     address=models.CharField(max_length=500)
-    city=models.CharField(max_length=30)
-    state=models.CharField(max_length=30)
-    pincode=models.IntegerField()
 
     def __str__(self):
         return self.name

@@ -8,7 +8,7 @@ from .models import App
 @admin.register(App)
 class AppAdmin(ImportExportActionModelAdmin):
     model = App
-    list_display = ['name','email','phonenum','address','city','state','pincode']
+    list_display = ['name','email','phonenum','address']
     list_filter = list_display
 
     
