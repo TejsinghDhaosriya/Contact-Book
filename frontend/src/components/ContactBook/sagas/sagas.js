@@ -77,7 +77,7 @@ export function* postContactSaga(params) {
     setSubmitting(true);
     yield call(postContact, values);
 
-    yield put(getContactsAction());
+    yield put(getContactsAction({ offset: 0, limit: 5, name: "" }));
     yield put(
       enqueueSnackbar({
         message: "Contact created successfully!",
@@ -113,7 +113,7 @@ export function* putContactSaga(params) {
   } = params;
   try {
     yield call(putContact, id, values);
-    yield put(getContactsAction());
+    yield put(getContactsAction({ offset: 0, limit: 5, name: "" }));
     setSubmitting(true);
     yield put(
       enqueueSnackbar({
@@ -147,7 +147,7 @@ export function* deleteContactSaga(params) {
   try {
     const { data: id } = params;
     yield call(deleteContact, id);
-    yield put(getContactsAction());
+    yield put(getContactsAction({ offset: 0, limit: 5, name: "" }));
     yield put(
       enqueueSnackbar({
         message: "Contact deleted successfully!",
