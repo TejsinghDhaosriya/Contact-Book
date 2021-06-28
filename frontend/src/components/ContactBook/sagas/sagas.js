@@ -23,6 +23,7 @@ import { getContacts as getContactsAction } from "../actions";
 export function* getContactsSaga(params) {
   try {
     const { data } = params;
+    if (data.name === undefined) data.name = "";
     yield put(setContactsLoading(true));
     const { data: result } = yield call(getContacts, data);
     yield put(setContacts(result));
@@ -86,7 +87,7 @@ export function* postContactSaga(params) {
         },
       })
     );
-    yield put(setDrawer(false))
+    yield put(setDrawer(false));
   } catch (e) {
     console.error(e);
     yield put(
@@ -123,7 +124,7 @@ export function* putContactSaga(params) {
         },
       })
     );
-    yield put(setDrawer(false))
+    yield put(setDrawer(false));
   } catch (e) {
     console.error(e);
     yield put(
