@@ -36,19 +36,13 @@ Tested upto iphone6
 
 #### Pls visit to above link for demo
 
-##Project Link :-<br/>
-[Frontend-Link to Project!](https://tej-contact-book.netlify.app/)<br/>
-[Backend-Link to Project!](https://tej-contact-book.herokuapp.com)
 
 ##Project Credentials :-<br/>
 Login as admin in frontend via
 username :- root
 password :- root
 <br/>
-Login as user in frontend via
-username :- tej
-password :- rootroot
-<br/>
+
 we can create a new user via signup , make sure that password should be greater than or equal to 8
 
 # Contact-Book
