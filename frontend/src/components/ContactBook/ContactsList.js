@@ -88,6 +88,7 @@ export default function ContactsList() {
       <form className={classes.root} noValidate style={{ float: "right" }}>
         <TextField
           onChange={(e) => setSearch(e.target.value)}
+          value={search??""}
           id="standard-basic"
           label="Search"
         />

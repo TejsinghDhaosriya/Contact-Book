@@ -11,7 +11,7 @@ import Page403 from "./utils/Page403";
 
 import { withTheme } from "./theme";
 
-function App(props) {
+function App() {
   const authToken = useSelector(selectAuthToken);
 
   // Add/Delete axios Authorization header
