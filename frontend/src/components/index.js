@@ -111,7 +111,7 @@ function Dashboard(props) {
   }, [page]);
 
   useEffect(() => {
-    dispatch(getContacts());
+    dispatch(getContacts({ offset: 0, limit: 5, name: "" }));
   }, []);
   const drawer = (
     <div className={c.drawerContent}>

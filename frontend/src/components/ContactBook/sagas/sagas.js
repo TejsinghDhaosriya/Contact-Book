@@ -23,7 +23,6 @@ import { getContacts as getContactsAction } from "../actions";
 export function* getContactsSaga(params) {
   try {
     const { data } = params;
-
     yield put(setContactsLoading(true));
     const { data: result } = yield call(getContacts, data);
     yield put(setContacts(result));

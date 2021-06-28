@@ -8,6 +8,6 @@ export const getContact = (id, params) =>
   axios.get(`${baseURL}/api/apps/${id}/`, params);
 
 export const getContacts = (params) =>
-  axios.get(`${baseURL}/api/apps/`, params);
+  axios.get(`${baseURL}/api/apps/?limit=${params.limit}&offset=${params.offset}&name=${params.name}`,);
 
 export const deleteContact = (id) => axios.delete(`${baseURL}/api/apps/${id}/`);
